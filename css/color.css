@@ -1,0 +1,12 @@
+.text-color-primary{
+    color: rgb(0, 204, 255);
+}
+.text-color-white{
+    color: white;
+}
+.card-title{
+    color:  rgba(0, 204, 255);
+}
+.card-text{
+    color: white;
+}

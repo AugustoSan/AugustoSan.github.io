@@ -1,0 +1,92 @@
+.width-xsm{
+    width: 3rem;
+}
+.width-sm{
+    width: 5rem;
+}
+.width-md{
+    width: 15rem;
+}
+.width-lg{
+    width: 25rem;
+}
+.width-xlg{
+    width: 30rem;
+}
+.height-xsm{
+    height: 3rem;
+}
+.height-sm{
+    height: 10rem;
+}
+.height-md{
+    height: 15rem;
+}
+.height-lg{
+    height: 20rem;
+}
+.height-xlg{
+    height: 30rem;
+}
+
+#Home{
+    background-image: url('../images/traje_2.png');
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: center;
+    height: 650px;
+    width: 100%;
+}
+#Home-frase{
+    background: radial-gradient(ellipse, rgba(0,0,0,0.5), rgba(0,0,0,0.9));
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+  
+#Frase {
+    /* IMPORTANTE */
+    width: 60%;
+    color:  rgb(220, 220, 220);
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+#Frase > p {
+    color:  rgba(0, 204, 255);
+}
+
+
+h1{
+  color: aliceblue;  
+}
+h2{
+    margin-top: 40px;
+}
+.redesSociales{
+    margin: auto;
+    width: 40rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.redesSociales > a{
+    align-content: center;
+}
+.icon{
+    align-self: center;
+    width: 3rem;
+}
+.form-group{
+    margin: auto;
+    width: 100%;
+}
+
+.card{
+    margin: 1rem;
+    padding: 0.25rem;
+    background-color: black;
+    border: 2px solid rgb(220, 220, 220);
+    border-radius: 0.25rem;
+}
