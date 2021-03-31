@@ -29,6 +29,10 @@
     height: 30rem;
 }
 
+ul > li{
+    list-style:none;
+}
+
 #Home{
     background-image: url('../images/traje_2.png');
     background-repeat: no-repeat;
@@ -89,4 +93,9 @@ h2{
     background-color: black;
     border: 2px solid rgb(220, 220, 220);
     border-radius: 0.25rem;
+}
+.exp-act{
+    color: white;
+    font-size:smaller;
+    text-justify: auto;
 }
