@@ -57,6 +57,7 @@ ul > li{
     text-align: center;
     display: table-cell;
     vertical-align: middle;
+    font-style: italic;
 }
 #Frase > p {
     color:  rgba(0, 204, 255);
@@ -93,6 +94,11 @@ h2{
     background-color: black;
     border: 2px solid rgb(220, 220, 220);
     border-radius: 0.25rem;
+}
+#msg{
+    max-width: 25%;
+    color: white;
+    text-align: justify;
 }
 .tec-formacion{
     color: white;
