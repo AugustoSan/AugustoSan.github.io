@@ -96,9 +96,8 @@ h2{
     border-radius: 0.25rem;
 }
 #msg{
-    max-width: 25%;
+    max-width: 50%;
     color: white;
-    text-align: justify;
 }
 .tec-formacion{
     color: white;
