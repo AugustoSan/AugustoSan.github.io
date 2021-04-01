@@ -94,8 +94,12 @@ h2{
     border: 2px solid rgb(220, 220, 220);
     border-radius: 0.25rem;
 }
+.tec-formacion{
+    color: white;
+    margin-bottom: 0;
+}
 .exp-act{
     color: white;
     font-size:smaller;
-    text-justify: auto;
+    text-align: center;
 }
