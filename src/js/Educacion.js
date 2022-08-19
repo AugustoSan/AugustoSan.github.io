@@ -31,21 +31,23 @@ const educacionHtml = () =>{
 
 const creaDivEscuela = ( { img, nombre, direccion, telefono, periodo } ) => {
     const elementoHtml = `
-    <div class="card mb-3">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="assets/img/${ img }" class="img-fluid rounded-start" width="200px">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">${ nombre }</h5>
-                    <p class="card-text">${ direccion }</p>
-                    <p class="card-text">Tel: ${ telefono }</p>
-                    <p class="card-text">${ periodo }</p>   
+    <li class="list-group-item">
+        <div class="mb-3">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="assets/img/${ img }" class="img-fluid rounded-start" width="200px">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-body">
+                        <h5 class="card-title">${ nombre }</h5>
+                        <p class="card-text">${ direccion }</p>
+                        <p class="card-text">Tel: ${ telefono }</p>
+                        <p class="card-text">${ periodo }</p>   
+                    </div>
                 </div>
             </div>
         </div>
-    </div>`;
+    </li>`;
     const div = document.createElement('div');
     div.innerHTML = elementoHtml;
     divEducacionBody.append( div);
