@@ -1,6 +1,7 @@
 // imports
 import { educacionHtml } from "./Educacion";
 import { redSocialHtml } from "./redSocial";
+import { tecnologiaHtml } from "./Tecnologias";
 
 // Referencias
 const divHome        = document.querySelector('#Home');
@@ -87,5 +88,6 @@ export const init = () => {
     perfilHtml();
     educacionHtml();
     redSocialHtml();
+    tecnologiaHtml();
     divHome.hidden = false;
 }

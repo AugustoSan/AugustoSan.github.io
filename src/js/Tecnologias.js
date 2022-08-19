@@ -1,59 +1,103 @@
-const divEducacionBody = document.querySelector('.educacionDiv');
+const divTecnologias = document.querySelector('.tecnologiasDiv');
 
-const escuelas = [
+const tecnologias = [
     {
-        img: 'logo_de_la_BUAP.svg',
-        nombre: 'Benemérita Universidad Autónoma de Puebla', 
-        direccion: 'Av San Claudio s/n, Cd Universitaria, La Hacienda, 72592 Puebla, Pue.', 
-        telefono: '(222) 229 5500', 
-        periodo: 'Agosto-2015 - Julio-2021'
+        img: 'logo_android.png', 
+        nombre: 'Android Studio'
     },
     {
-        img: 'escudo_epfaa.png',
-        nombre: 'Escuela Preparatoría Federal por Cooperación "Antonio Audirac"', 
-        direccion: 'Calle Guadalupe Victoria S/N, Centro, 73800 Teziutlán, Pue.', 
-        telefono: '(231) 313 1819', 
-        periodo: 'Agosto-2012 - Julio-2015'
+        img: 'logo_api.png',
+        nombre: 'API Rest'
     },
     {
-        img: 'escudo_secu.png',
-        nombre: 'Escuela Secundaria "Lic. Benito Juarez no.11"', 
-        direccion: 'Reforma 93, Sta Maria Nativitas, 53020 Naucalpan de Juárez, Méx.', 
-        telefono: '55 5560 2520', 
-        periodo: 'Agosto-2009 - Julio-2012'
+        img: 'logo_c++.png',
+        nombre: 'C++'
+    }, 
+    {
+        img: 'logo_csharp.png',
+        nombre: 'C#'
+    },
+    {
+        img: 'logo_debian.png',
+        nombre: 'Debian'
+    },
+    {
+        img: 'logo_flutter.svg',
+        nombre: 'Flutter'
+    }, 
+    {
+        img: 'logo_git.png',
+        nombre: 'Git'
+    },
+    {
+        img: 'logo_html.png',
+        nombre: 'HTML'
+    },
+    {
+        img: 'logo_java.png',
+        nombre: 'Java'
+    }, 
+    {
+        img: 'logo_js.png',
+        nombre: 'JavaScript'
+    },
+    {
+        img: 'logo_json.png',
+        nombre: 'JSON'
+    },
+    {
+        img: 'logo_linux_mint.png',
+        nombre: 'Linux Mint'
+    }, 
+    {
+        img: 'logo_mx_linux.png',
+        nombre: 'Mx Linux'
+    },
+    {
+        img: 'logo_mysql.png',
+        nombre: 'MySQL'
+    },
+    {
+        img: 'logo_php.png',
+        nombre: 'PHP'
+    },
+    {
+        img: 'logo_sql_server.png',
+        nombre: 'SQL Server'
     },
 ];
 
-const educacionHtml = () =>{
-    console.log('entro en educacionthml');
-    escuelas.forEach( creaDivEscuela );
-    console.log('divEducacionBody', divEducacionBody);
+const tecnologiaHtml = () =>{
+    tecnologias.forEach( creaDivTecnologia );
 }
 
 
-const creaDivEscuela = ( { img, nombre, direccion, telefono, periodo } ) => {
-    const elementoHtml = `
-    <div class="card mb-3">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="assets/img/${ img }" class="img-fluid rounded-start">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">${ nombre }</h5>
-                    <p class="card-text">${ direccion }</p>
-                    <p class="card-text">Tel: ${ telefono }</p>
-                    <p class="card-text">${ periodo }</p>   
-                </div>
-            </div>
-        </div>
-    </div>`;
-    const div = document.createElement('div');
-    div.innerHTML = elementoHtml;
-    console.log('div',div);
-    divEducacionBody.append( div);
+const creaDivTecnologia = ( { img, nombre } ) => {
+
+    const imageObj = new Image();
+    imageObj.src = 'assets/img/tecnologias/' + img ;
+
+    imageObj.onload = function() {
+        escala( imageObj, 100 );
+    }
+    imageObj.classList.add('m-2')
+    divTecnologias.append( imageObj );
+}
+
+
+const escala = ( img, maxPixels ) => {
+    if( img.width >= img.height ){
+        const newHeigth = ( img.height * maxPixels ) / img.width;
+        img.width  = maxPixels;
+        img.height = newHeigth;
+    }
+    else{
+        const newWidth = ( img.width * maxPixels ) / img.height;
+        img.height  = maxPixels;
+        img.width   = newWidth;
+    }
 }
 
 export {
-    educacionHtml
+    tecnologiaHtml
 }

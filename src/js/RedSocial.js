@@ -20,9 +20,7 @@ const redesSociales = [
 ];
 
 const redSocialHtml = () =>{
-    console.log('entro en educacionthml');
     redesSociales.forEach( creaDivRedSocial );
-    console.log('divRedesSociales', divRedesSociales);
 }
 
 
@@ -33,7 +31,6 @@ const creaDivRedSocial = ( { img, href } ) => {
     </a>`;
     const div = document.createElement('div');
     div.innerHTML = elementoHtml;
-    console.log('div',div.firstChild );
     divRedesSociales.append( div.firstChild );
 }
 
