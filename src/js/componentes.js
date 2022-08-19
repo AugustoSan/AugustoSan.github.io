@@ -87,4 +87,5 @@ export const init = () => {
     perfilHtml();
     educacionHtml();
     redSocialHtml();
+    divHome.hidden = false;
 }
