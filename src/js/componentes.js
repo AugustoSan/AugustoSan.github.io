@@ -1,5 +1,6 @@
 // imports
 import { educacionHtml } from "./Educacion";
+import { createItemsMenu } from "./menu";
 import { redSocialHtml } from "./redSocial";
 import { tecnologiaHtml } from "./Tecnologias";
 
@@ -83,6 +84,7 @@ menuNav.addEventListener( 'click', ( event ) =>{
 
 
 export const init = () => {
+    createItemsMenu();
     widthImgs();
     menuHtml();
     perfilHtml();
